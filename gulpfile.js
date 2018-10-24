@@ -68,7 +68,6 @@
     return gulp.src([PATHS.JS, '!./dist/**', '!./node_modules/**', '!gulpfile.js'])
       .pipe(sourcemaps.init())
       .pipe(gulpif(conditionJs, uglify()))
-      // .pipe(uglify())
       .pipe(sourcemaps.write('.'))
       .pipe(gulp.dest(PATHS.DEST))
       .pipe(notify({ message: 'js minify complete' }));
