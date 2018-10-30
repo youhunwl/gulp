@@ -75,7 +75,7 @@
 
   // 压缩处理 html
   gulp.task('minify-html', function () {
-    return gulp.src([PATHS.HTML,'!./dist/**', '!./node_modules/**'])
+    return gulp.src(PATHS.DEST+PATHS.HTML)
       .pipe(htmlclean())
       .pipe(htmlmin({
         removeComments: true, //清除HTML注释
